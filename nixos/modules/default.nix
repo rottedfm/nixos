@@ -11,5 +11,8 @@
 
     # xwayland
     ./x11.nix
+
+    # zsh
+    ./zsh.nix
   ];
 }

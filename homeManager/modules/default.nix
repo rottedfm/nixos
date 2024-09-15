@@ -5,5 +5,8 @@
 
     # hyprland
     ./hyprland.nix
+
+    # zsh
+    ./zsh.nix
   ];
 }
