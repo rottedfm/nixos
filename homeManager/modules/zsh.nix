@@ -7,6 +7,7 @@
 
     shellAliases = {
       rebuild = "bash /home/rotted/.dotfiles/rebuild.sh";
+      shutdown = "shutdown now";
     };
   };
 }

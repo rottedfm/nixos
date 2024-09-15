@@ -30,7 +30,7 @@ echo "Showing git dif..."
 git diff --cached
 
 # commit
-COMMIT_MSG="Rebuild NixOS configuration on $(date)"
+COMMIT_MSG="$(date)"
 git commit -m "$COMMIT_MSG"
 
 # push changes to git
