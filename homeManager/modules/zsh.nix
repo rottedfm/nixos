@@ -6,8 +6,19 @@
     enableCompletion = true;
 
     shellAliases = {
-      rebuild = "bash /home/rotted/.dotfiles/rebuild.sh";
+      sync = "bash /home/rotted/.dotfiles/sync.sh";
       shutdown = "shutdown now";
+    };
+
+    antidote = {
+      enable = true;
+      plugins =  [''
+        zsh-users/zsh-syntax-highlighting
+        zsh-users/zsh-autosuggestion
+        zsh-users/zsh-history-substring-search
+
+        sindresorhus/pure
+      ''];
     };
   };
 }
