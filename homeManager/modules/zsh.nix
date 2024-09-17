@@ -10,15 +10,13 @@
       shutdown = "shutdown now";
     };
 
-    antidote = {
-      enable = true;
-      plugins =  [''
-        zsh-users/zsh-syntax-highlighting
-        zsh-users/zsh-autosuggestion
-        zsh-users/zsh-history-substring-search
-
-        sindresorhus/pure
-      ''];
+    zplug = {
+      enable = true; 
+      plugins = [
+        {name = "zsh-users/zsh-autosuggestions";}
+        {name = "zsh-users/zsh-substring-search";}
+        {name = "zsh-users/zsh-syntax-highlighting";}
+      ];
     };
   };
 }
