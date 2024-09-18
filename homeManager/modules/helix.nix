@@ -10,10 +10,10 @@
       pkgs.unstable.marksman
     ];   
     languages = {
-      language = {        
+      language = [{
         name = "markdown";
-        language-servers = ["ltex-ls" "marksman"];
-      };
+        language-servers = [ "marksman" "ltex-ls"];
+      }];
     };
   };
 }
