@@ -11,12 +11,11 @@ if [ $? -ne 0 ]; then
   if [["$answer" == "y"]]; then
     sudo nixos-rebuild switch --show-trace --flake /home/rotted/.dotfiles#fm 
   elif [["$answer" == "n"]]; then
-    exit 1
+    exit 0
   else
     echo "Invaild input. Please enter 'y' or 'n'."
-    exit 1
+    exit 0
   fi
-  exit 1
 fi
 
 # rebuild home-manger
@@ -30,12 +29,11 @@ if [ $? -ne 0 ]; then
   if [["$answer" == "y"]]; then
     home-manager switch --show-trace --flake /home/rotted/.dotfiles#rotted@fm 
   elif [["$answer" == "n"]]; then
-    exit 1
+    exit 0
   else
     echo "Invaild input. Please enter 'y' or 'n'."
-    exit 1
+    exit 0
   fi
-  exit 1
 fi
 
 # cd into .dotfiles
