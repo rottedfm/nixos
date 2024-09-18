@@ -1,13 +1,13 @@
 { config, pkgs, outputs, ...}:
 
 {
-
   programs.helix = {
-    package = pkgs.helix;
+    enable = true;
+    package = pkgs.unstable.helix;
     defaultEditor = true;
     extraPackages = [
-      pkgs.ltex-ls
-      pkgs.marksman
+      pkgs.unstable.ltex-ls
+      pkgs.unstable.marksman
     ];   
     languages = [{
       name = "markdown";
