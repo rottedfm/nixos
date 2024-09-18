@@ -1,15 +1,13 @@
 { config, pkgs, outputs, ...}:
 
 {
-  nixpkgs.overlays = [ outputs.overlays.unstable-packages ];
 
   programs.helix = {
-    # Unstable
-    package = pkgs.unstable.helix;
+    package = pkgs.helix;
     defaultEditor = true;
     extraPackages = [
-      pkgs.unstable.ltex-ls
-      pkgs.unstable.marksman
+      pkgs.ltex-ls
+      pkgs.marksman
     ];   
     languages = [{
       name = "markdown";
