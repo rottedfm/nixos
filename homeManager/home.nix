@@ -10,5 +10,10 @@
 
   home.stateVersion = "24.05";
 
+  home.packages = [
+    # shell
+    pkgs.unstable.glow
+  ];
+
   programs.home-manager.enable = true;
 }

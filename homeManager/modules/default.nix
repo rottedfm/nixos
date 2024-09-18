@@ -8,5 +8,8 @@
 
     # zsh
     ./zsh.nix
+
+    # helix 
+    ./helix.nix
   ];
 }

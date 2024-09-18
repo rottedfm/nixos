@@ -10,6 +10,11 @@
       shutdown = "shutdown now";
     };
 
+    initExtra = ''
+      bindkey '^[[B' history-substring-search-up
+      bindkey '^[[D' history-substring-search-down
+    '';
+
     zplug = {
       enable = true; 
       plugins = [
