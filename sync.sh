@@ -1,58 +1,66 @@
 #!/bin/env bash
 
-# rebuild nixos
-echo "Rebuilding NixOS configuration..."
-sudo nixos-rebuild switch --flake /home/rotted/.dotfiles#fm
+# exit if any command exits with a non-zero status
+set -e
 
-# check if rebuild was successful
-if [ $? -ne 0 ]; then
-  echo "NixOS rebuild failed!"
+# function to rebuild NixOS
+rebuild_nixos() {
+  echo "Rebuilding NixOS configuration..."
+  sudo nixos-rebuild switch --flake /home/rotted/.dotfiles#fm
+}
+
+# function to rebuild home-manager
+rebuild_home_manager() {
+  echo "Rebuilding Home-Manager configuration..."
+  home-manager switch --flake /home/rotted/.dotfiles#rotted@fm
+}
+
+# function to hadle rebuild failure
+handle_failure() {
+  local service=$1
+  echo "$service rebuild failed!"
   read -p "Do you want to show-trace? (y/n): " answer
-  answer=${answer,,} # convert to lowercase
-  if [["$answer" == "y"]]; then
-    sudo nixos-rebuild switch --show-trace --flake /home/rotted/.dotfiles#fm 
+  answer=${answer,,}
+  if [[ "$answer" == "y" ]]; then
+    if [[ "$service" == "NixOS" ]]; then
+      sudo nixos-rebuild switch --show-trace --flake /home/rotted/.dotfiles#fm
+    else 
+      home-manager switch --show-trace --flake /home/rotted/.dotfiles#rotted@fm
+    fi
   fi
-  # exit if rebuild fails
   exit 1
+}
+
+# attempt to rebuild nixos
+if ! rebuild_nixos; then
+  handle_failure "NixOS"
 fi
 
-# rebuild home-manger
-echo "Rebuilding Home-Manager configuration..."
-home-manager switch --flake /home/rotted/.dotfiles#rotted@fm
-
-if [ $? -ne 0 ]; then 
-  echo "Home-Manager rebuild failed!"
-  read -p "Do you want to show-trace? (y/n): " answer
-  answer=${answer..} # convert to lowercase
-  if [["$answer" == "y"]]; then
-    home-manager switch --show-trace --flake /home/rotted/.dotfiles#rotted@fm 
-  fi
-  # exit if rebuild fails
-  exit 1
+# attempt to rebuild home-manager
+if ! rebuild_home_manager; then 
+  handle_failure "Home-Manager"
 fi
 
-# cd into .dotfiles
 cd /home/rotted/.dotfiles || exit 1
 
 # add changes to git
-echo "Adding changes to Git..."
+echo "Adding chanages to Git..."
 git add .
 
 # show git diff
-echo "Showing git dif..."
+echo "Showing git diff..."
 git diff --cached
 
-# commit
+# commit chanages 
 COMMIT_MSG="$(date)"
 git commit -m "$COMMIT_MSG"
 
 # push changes to git
 git push -u origin main
 
+# check if the push was successful
 if [ $? -eq 0 ]; then
   echo "Changes successfully pushed to Git."
 else
   echo "Failed to push changes to Git."
 fi
-
-

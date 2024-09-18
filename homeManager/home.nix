@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, outputs, inputs, lib, ... }:
 
 {
   imports = [
@@ -8,6 +8,14 @@
   home.username = "rotted";
   home.homeDirectory = "/home/rotted";
 
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.unstable-packages
+    ];
+
+    config.allowUnfree = true;
+  };
+  
   home.stateVersion = "24.05";
 
   home.packages = [
