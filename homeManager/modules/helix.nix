@@ -1,6 +1,8 @@
-{ config, pkgs, ...}:
+{ config, pkgs, outputs, ...}:
 
 {
+  nixpkgs.overlays = [ outputs.overlays.unstable-packages ];
+
   programs.helix = {
     # Unstable
     package = pkgs.unstable.helix;
