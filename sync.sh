@@ -16,6 +16,7 @@ if [ $? -ne 0 ]; then
     echo "Invaild input. Please enter 'y' or 'n'."
     exit 1
   fi
+  exit 1
 fi
 
 # rebuild home-manger
@@ -34,6 +35,7 @@ if [ $? -ne 0 ]; then
     echo "Invaild input. Please enter 'y' or 'n'."
     exit 1
   fi
+  exit 1
 fi
 
 # cd into .dotfiles
