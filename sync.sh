@@ -4,18 +4,16 @@
 echo "Rebuilding NixOS configuration..."
 sudo nixos-rebuild switch --flake /home/rotted/.dotfiles#fm
 
+# check if rebuild was successful
 if [ $? -ne 0 ]; then
   echo "NixOS rebuild failed!"
   read -p "Do you want to show-trace? (y/n): " answer
-  answer=${answer..}
+  answer=${answer,,} # convert to lowercase
   if [["$answer" == "y"]]; then
     sudo nixos-rebuild switch --show-trace --flake /home/rotted/.dotfiles#fm 
-  elif [["$answer" == "n"]]; then
-    exit 0
-  else
-    echo "Invaild input. Please enter 'y' or 'n'."
-    exit 0
   fi
+  # exit if rebuild fails
+  exit 1
 fi
 
 # rebuild home-manger
@@ -25,19 +23,16 @@ home-manager switch --flake /home/rotted/.dotfiles#rotted@fm
 if [ $? -ne 0 ]; then 
   echo "Home-Manager rebuild failed!"
   read -p "Do you want to show-trace? (y/n): " answer
-  answer=${answer..}
+  answer=${answer..} # convert to lowercase
   if [["$answer" == "y"]]; then
     home-manager switch --show-trace --flake /home/rotted/.dotfiles#rotted@fm 
-  elif [["$answer" == "n"]]; then
-    exit 0
-  else
-    echo "Invaild input. Please enter 'y' or 'n'."
-    exit 0
   fi
+  # exit if rebuild fails
+  exit 1
 fi
 
 # cd into .dotfiles
-cd /home/rotted/.dotfiles
+cd /home/rotted/.dotfiles || exit 1
 
 # add changes to git
 echo "Adding changes to Git..."
