@@ -21,6 +21,8 @@
   home.packages = [
     # shell
     pkgs.unstable.glow
+    # gimp
+    pkgs.unstable.gimp
   ];
 
   programs.home-manager.enable = true;
