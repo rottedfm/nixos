@@ -5,5 +5,6 @@
   ./hyprland.nix
   ./helix.nix
   ./git.nix
+  ./qutebrowser.nix
   ];
 }

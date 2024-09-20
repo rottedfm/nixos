@@ -6,7 +6,7 @@
     enableCompletion = true;
 
     shellAliases = {
-      sync = "bash /home/rotted/.dotfiles/sync.sh";
+      sync = "bash /home/rotted/.dotfiles/sync";
       shutdown = "shutdown now";
     };
 
