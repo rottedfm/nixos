@@ -1,7 +1,10 @@
-#!/bin/env bash
+#!/bin/bash
 
 # exit if any command exits with a non-zero status
 set -e
+
+echo "Adding chanages to Git..."
+git add .
 
 # function to rebuild NixOS
 rebuild_nixos() {
@@ -43,9 +46,6 @@ fi
 
 cd /home/rotted/.dotfiles || exit 1
 
-# add changes to git
-echo "Adding chanages to Git..."
-git add .
 
 # show git diff
 echo "Showing git diff..."

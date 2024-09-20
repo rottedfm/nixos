@@ -1,15 +1,9 @@
 {
-  imports = [
-    # git
-    ./git.nix    
-
-    # hyprland
-    ./hyprland.nix
-
-    # zsh
-    ./zsh.nix
-
-    # helix 
-    ./helix.nix
+  imports = [ 
+  ./kitty.nix 
+  ./zsh.nix
+  ./hyprland.nix
+  ./helix.nix
+  ./git.nix
   ];
 }

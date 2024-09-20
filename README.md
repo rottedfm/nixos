@@ -2,3 +2,6 @@
 
 ## TODO: 
 - [ ] kitty
+- [ ] qutebrowser
+- [ ] rust
+- [ ] helix settings
