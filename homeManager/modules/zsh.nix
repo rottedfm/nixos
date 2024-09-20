@@ -8,6 +8,7 @@
     shellAliases = {
       sync = "bash /home/rotted/.dotfiles/sync";
       shutdown = "shutdown now";
+      cd = "z";
     };
 
     initExtra = ''

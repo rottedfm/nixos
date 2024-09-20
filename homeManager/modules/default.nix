@@ -6,5 +6,6 @@
   ./helix.nix
   ./git.nix
   ./qutebrowser.nix
+  ./zoxide.nix
   ];
 }
