@@ -21,10 +21,12 @@
   home.packages = [
     # shell
     pkgs.unstable.glow
+    pkgs.cmatrix
 
     # auth
     pkgs.pass
 
+    # 
     
   ];
 
