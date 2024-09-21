@@ -52,10 +52,6 @@
     packages = with pkgs; [];
   };
 
-  # packages
-  environment.systemPackages = with pkgs; [
-    pass
-  ];
   
   # look up
   system.stateVersion = "24.05";
