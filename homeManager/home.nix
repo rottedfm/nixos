@@ -21,6 +21,11 @@
   home.packages = [
     # shell
     pkgs.unstable.glow
+
+    # auth
+    pkgs.pass
+
+    
   ];
 
   programs.home-manager.enable = true;

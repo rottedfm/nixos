@@ -7,5 +7,6 @@
   ./git.nix
   ./qutebrowser.nix
   ./zoxide.nix
+  ./gpg.nix
   ];
 }
