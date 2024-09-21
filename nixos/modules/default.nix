@@ -5,6 +5,7 @@
     ./locals.nix
     ./network.nix    
     ./boot.nix
+    ./pipewire.nix
 
     # ssh
     ./ssh.nix
