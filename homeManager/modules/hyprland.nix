@@ -4,6 +4,11 @@
   wayland.windowManager.hyprland = {
     enable = true; 
     settings = {
+      # env
+      env = [
+        "HYPRCURSOR_SIZE,16"
+      ];
+      
       # monitor settings
       monitor = ",highrr,auto,1";
 
