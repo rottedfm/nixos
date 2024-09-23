@@ -44,6 +44,9 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
+  # stylix gtk error fix
+  programs.dconf.enable = true;
+
   # user settings
   users.users.rotted = {
     isNormalUser = true;
