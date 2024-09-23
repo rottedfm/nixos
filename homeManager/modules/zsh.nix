@@ -17,13 +17,16 @@
       bindkey '^[[D' history-substring-search-down
     '';
 
-    zplug = {
-      enable = true; 
-      plugins = [
-        {name = "zsh-users/zsh-autosuggestions";}
-        {name = "zsh-users/zsh-history-substring-search";}
-        {name = "zsh-users/zsh-syntax-highlighting";}
-      ];
+
+    # plugins
+    antidote = {
+      enable = true;
+      plugins = [''
+        zsh-users/zsh-autosuggestions
+        zsh-users/zsh-history-substring-search
+        zsh-users/zsh-syntax-highlighting
+        romkatv/powerlevel10k
+      ''];
     };
   };
 }
