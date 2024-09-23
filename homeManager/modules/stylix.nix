@@ -4,6 +4,7 @@
   stylix.enable = true;
 
   stylix.image = ../../wallpapers/sakura-wall.png;
+  stylix.polarity = "dark";
 
   stylix.fonts = {
     serif = {
