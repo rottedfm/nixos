@@ -23,6 +23,8 @@
     pkgs.unstable.glow
     pkgs.cmatrix
     pkgs.ttyper
+    pkgs.bottom
+    pkgs.neofetch
 
     # auth
     pkgs.pass
