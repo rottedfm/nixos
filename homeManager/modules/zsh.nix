@@ -14,7 +14,7 @@
 
     initExtra = ''
 
-      source ../../../.p10k.zsh 
+      source ../../p10k.zsh 
       bindkey '^[[B' history-substring-search-up
       bindkey '^[[D' history-substring-search-down
     '';
