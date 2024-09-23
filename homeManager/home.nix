@@ -28,6 +28,7 @@
 
     # auth
     pkgs.pass
+    pkgs.wofi-pass
 
     # msc
     pkgs.unstable.firefox
