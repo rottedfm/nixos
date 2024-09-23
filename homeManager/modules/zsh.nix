@@ -9,6 +9,7 @@
       sync = "bash /home/rotted/.dotfiles/sync";
       shutdown = "shutdown now";
       cd = "z";
+      ttyper = "ttyper -l rust";
     };
 
     initExtra = ''
