@@ -28,7 +28,7 @@
 
     sizes = {
       applications = 12;
-      terminal = 15;
+      terminal = 12;
       desktop = 10;
       popups = 10;
     };
@@ -36,4 +36,5 @@
 
   stylix.cursor.name = "Bibata-Modern-Ice";
   stylix.cursor.package = pkgs.bibata-cursors;
+  stylix.cursor.size = 16;
 }
