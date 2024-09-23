@@ -19,6 +19,7 @@
     self,
     nixpkgs,
     home-manager,
+    stylix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -52,6 +53,7 @@
         extraSpecialArgs = {inherit inputs outputs;};      
         modules = [
           ./homeManager/home.nix
+          stylix.homeManagerModules.stylix
         ];
       };
     };

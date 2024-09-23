@@ -8,5 +8,6 @@
   ./qutebrowser.nix
   ./zoxide.nix
   ./gpg.nix
+  ./stylix.nix
   ];
 }

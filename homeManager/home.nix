@@ -26,9 +26,8 @@
     # auth
     pkgs.pass
 
-    # 
-    
   ];
 
+  
   programs.home-manager.enable = true;
 }
