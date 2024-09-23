@@ -9,5 +9,6 @@
   ./zoxide.nix
   ./gpg.nix
   ./stylix.nix
+  ./wofi.nix
   ];
 }
