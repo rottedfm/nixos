@@ -22,9 +22,13 @@
     # shell
     pkgs.unstable.glow
     pkgs.cmatrix
+    pkgs.ttyper
 
     # auth
     pkgs.pass
+
+    # msc
+    pkgs.unstable.firefox
 
   ];
 
