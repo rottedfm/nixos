@@ -3,7 +3,7 @@
 {
   stylix.enable = true;
 
-  stylix.image = ../../wallpapers/sakura-wallpaper1.jpg;
+  stylix.image = ../../wallpapers/mono.jpg;
 
   stylix.fonts = {
     serif = {
