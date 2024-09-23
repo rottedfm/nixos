@@ -28,7 +28,8 @@
 
     # auth
     pkgs.pass
-    pkgs.wofi-pass
+    pkgs.unstable.wofi-pass
+    pkgs.pinentry-curses
 
     # msc
     pkgs.unstable.firefox
