@@ -6,7 +6,7 @@
     settings = {
       # env
       env = [
-        "HYPRCURSOR_SIZE,16"
+        "HYPRCURSOR_SIZE,24"
       ];
       
       # monitor settings
