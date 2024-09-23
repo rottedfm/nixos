@@ -13,7 +13,7 @@
     };
 
     initExtra = ''
-      source ./home/rotted/.dotfiles/p10k.zsh
+      source /home/rotted/.dotfiles/p10k.zsh
       bindkey '^[[B' history-substring-search-up
       bindkey '^[[D' history-substring-search-down
     '';
