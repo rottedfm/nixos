@@ -13,6 +13,9 @@
 
     # Stylix
     stylix.url = "github:danth/stylix";
+
+    # ags
+    ags.url = "github:Aylur/ags";
   };
 
   outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
