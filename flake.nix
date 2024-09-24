@@ -55,6 +55,7 @@
               pkgs.rust-bin.stable.latest.default
               pkgs.gcc
               pkgs.pkg-config
+              pkgs.openssl
             ];
           })
         ];
