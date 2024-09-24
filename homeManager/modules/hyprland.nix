@@ -26,6 +26,7 @@
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
+        inactive_opacity = 0.8;
 
         # blur
         blur = {
