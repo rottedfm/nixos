@@ -10,9 +10,15 @@
       pkgs.unstable.marksman
     ];   
     languages = {
-      language = [{
+      language = [
+      {
         name = "markdown";
         language-servers = [ "marksman" "ltex-ls"];
+      }
+      {
+        name = "nix";
+        auto-format = true;
+        formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
       }];
     };
   };
