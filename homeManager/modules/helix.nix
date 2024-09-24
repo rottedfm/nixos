@@ -41,9 +41,9 @@
           "file-line-ending"
           "file-type"
         ];
-        mode.normal = "︻デ═一 - -";
-        mode.insert = "▄︻̷̿┻̿═━一  -";
-        mode.select = "︻╦̵̵͇̿̿̿̿══╤─ -   -";
+        mode.normal = "ʕ •ᴥ•ʔ";
+        mode.insert = "“φʕ•ᴥ•oʔ";
+        mode.select = "ʕ￫ᴥ￩ʔ";
 
       };
     };
