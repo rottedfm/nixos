@@ -41,9 +41,10 @@
           "file-line-ending"
           "file-type"
         ];
-        mode.normal = "ノーマル";
-        mode.insert = "インサート";
-        mode.select = "セレクト";
+        mode.normal = "︻デ═一 - -";
+        mode.insert = "▄︻̷̿┻̿═━一  -";
+        mode.select = "︻╦̵̵͇̿̿̿̿══╤─ -   -";
+
       };
     };
   };
