@@ -18,7 +18,7 @@
           formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
         }
         {
-          language-server = {
+          language-servers = {
             rust-analzyer = {
               config = {
                 check = {
