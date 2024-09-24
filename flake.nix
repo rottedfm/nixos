@@ -51,7 +51,11 @@
           ./nixos/configuration.nix
           ({ pkgs, ...}: {
             nixpkgs.overlays = [ rust-overlay.overlays.default ];
-            environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
+            environment.systemPackages = [ 
+              pkgs.rust-bin.stable.latest.default
+              pkgs.gcc
+              pkgs.pkg-config
+            ];
           })
         ];
       };
