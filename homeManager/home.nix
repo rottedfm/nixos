@@ -1,21 +1,17 @@
 { config, pkgs, outputs, inputs, lib, ... }:
 
 {
-  imports = [
-    ./modules/default.nix
-  ];
-  
+  imports = [ ./modules/default.nix ];
+
   home.username = "rotted";
   home.homeDirectory = "/home/rotted";
 
   nixpkgs = {
-    overlays = [
-      outputs.overlays.unstable-packages
-    ];
+    overlays = [ outputs.overlays.unstable-packages ];
 
     config.allowUnfree = true;
   };
-  
+
   home.stateVersion = "24.05";
 
   home.packages = [
@@ -34,8 +30,11 @@
     # msc
     pkgs.unstable.firefox
 
+    # libreoffice
+    pkgs.libreoffice-qt
+    pkgs.hunspell
+
   ];
 
-  
   programs.home-manager.enable = true;
 }

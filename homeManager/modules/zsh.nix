@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
   programs.zsh = {
@@ -17,7 +17,6 @@
       bindkey '^[[B' history-substring-search-up
       bindkey '^[[D' history-substring-search-down
     '';
-
 
     # plugins
     antidote = {

@@ -1,14 +1,12 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
   wayland.windowManager.hyprland = {
-    enable = true; 
+    enable = true;
     settings = {
       # env
-      env = [
-        "HYPRCURSOR_SIZE,24"
-      ];
-      
+      env = [ "HYPRCURSOR_SIZE,24" ];
+
       # monitor settings
       monitor = ",highrr,auto,1";
 
@@ -83,8 +81,7 @@
         "$mod CTRL, j, swapwindow, d"
         "$mod CTRL, k, swapwindow, u"
         "$mod CTRL, l, swapwindow, r"
-      ] 
-      ++ (
+      ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
         builtins.concatLists (builtins.genList (i:
@@ -92,10 +89,7 @@
           in [
             "$mod, code:1${toString i}, workspace, ${toString ws}"
             "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-          ]
-        )
-        9)
-      );
+          ]) 9));
 
       # move window shi
       binde = [
