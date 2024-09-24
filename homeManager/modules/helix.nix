@@ -17,17 +17,6 @@
           auto-format = true;
           formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
         }
-        {
-          language-servers = {
-            rust-analzyer = {
-              config = {
-                check = {
-                  command = "${pkgs.clippy}/bin/clippy";
-                };
-              };
-            };
-          };
-        }
       ];
     };
   };
