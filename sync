@@ -4,7 +4,7 @@
 set -e
 
 echo "Adding chanages to Git..."
-git add .
+git add ~/.dotfiles
 
 # function to rebuild NixOS
 rebuild_nixos() {
