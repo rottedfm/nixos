@@ -16,7 +16,5 @@
     # zsh
     ./zsh.nix
 
-    # rust
-
   ];
 }
