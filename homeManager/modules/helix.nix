@@ -18,9 +18,14 @@
           formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
         }
         {
-          name = "rust";
-          checkOnSave = {
-            command = "clippy";
+          language-server = {
+            rust-analzyer = {
+              config = {
+                check = {
+                  command = "${pkgs.clippy}/bin/clippy";
+                };
+              };
+            };
           };
         }
       ];
