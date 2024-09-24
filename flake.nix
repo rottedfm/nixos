@@ -13,6 +13,12 @@
 
     # Stylix
     stylix.url = "github:danth/stylix";
+
+    # Rust overlay
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -20,6 +26,7 @@
     nixpkgs,
     home-manager,
     stylix,
+    rust-overlay,
     ...
   } @ inputs: let
     inherit (self) outputs;
