@@ -18,7 +18,7 @@
         pkgs = import nixpkgs {
           inherit system;
           overlays = [ (import rust-overlay) ];
-        }
+        };
       in
       {
         devShell = pkgs.mkShell {
