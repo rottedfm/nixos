@@ -41,7 +41,6 @@
           "file-line-ending"
           "file-type"
         ];
-        seporator = "";
         mode.normal = "ノーマル";
         mode.insert = "インサート";
         mode.select = "セレクト";
