@@ -22,7 +22,7 @@
 
       # decoration
       decoration = {
-        rounding = 0;
+        rounding = 5;
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;

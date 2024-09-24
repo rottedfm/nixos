@@ -40,5 +40,4 @@
   stylix.cursor.size = 24;
 
   stylix.opacity.terminal = 0.8;
-  stylix.opacity.applications = 0.8;
 }
