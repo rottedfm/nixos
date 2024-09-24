@@ -11,7 +11,7 @@
       cd = "z";
       ttyper = "ttyper -l rust --sudden-death -w 20";
       exit = "exit | exit";
-      rustdev = "nix develop ~/.dotfiles/rust/flake.nix";
+      rustdev = "nix develop ~/.dotfiles/rust/";
     };
 
     initExtra = ''
