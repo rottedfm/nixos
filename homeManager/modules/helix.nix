@@ -19,5 +19,33 @@
         }
       ];
     };
+
+    settings = {
+      editor = {
+        line-number = "relative";
+        mouse = false;
+      };
+      editor.cursor-shape = {
+        insert = "bar";
+        normal = "block";
+        select = "underline";
+      };
+      editor.statusline = {
+        left = [ "mode" "spinner" ];
+        center = [ "file-name" ];
+        right = [
+          "diagnostics"
+          "selections"
+          "position"
+          "file-encoding"
+          "file-line-ending"
+          "file-type"
+        ];
+        seporator = "";
+        mode.normal = "ノーマル";
+        mode.insert = "インサート";
+        mode.select = "セレクト";
+      };
+    };
   };
 }
