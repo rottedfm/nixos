@@ -17,6 +17,7 @@
           auto-format = true;
           formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
         }
+        { language-server.rust-analyzer.config.check.command = "clippy"; }
       ];
     };
   };
