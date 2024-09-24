@@ -1,4 +1,4 @@
-{ 
+{
   description = "!rust!";
 
   inputs = {
@@ -19,8 +19,7 @@
           inherit system;
           overlays = [ (import rust-overlay) ];
         };
-      in
-      {
+      in {
         devShell = pkgs.mkShell {
           nativeBuildInputs = [
             pkgs.rust-bin.stable.latest.default
@@ -31,26 +30,12 @@
 
             # C libs commonly required by Rust crates
             pkgs.openssl
-            pkgs.pkgconfig
-            pkgs.libssl
-            pkgs.libiconv
-            pkgs.zlib
-            pkgs.libzstd
-            pkgs.libsqlite3
-            pkgs.libpq
-            pkgs.libgit2
+            pkgs.pkg-config
             pkgs.cmake
-            pkgs.make
             pkgs.gcc
             pkgs.binutils
             pkgs.autoconf
             pkgs.automake
-            pkgs.gnum4
-            pkgs.libffi
-            pkgs.libxml2
-            pkgs.libtiff
-            pkgs.libpng
-            pkgs.libjpeg
             pkgs.gnumake
             pkgs.gmp
             pkgs.curl
@@ -60,12 +45,17 @@
             pkgs.vscode-extensions.vadimcn.vscode-lldb
           ];
 
-        OPENSSL_DIR = pkgs.openssl.dev
-        OPENSSL_LIB_DIR = "${pkgs.openssl.dev}/lib";          
-        OPENSSL_INCLUDE_DIR = "${pkgs.openssl.dev}/include";
+          shellHook = ''
+            export PKG_CONFIG_PATH="${pkgs.openssl.dev}/lib/pkgconfig:$PKG_CONFIG_PATH"
+            zsh
+          '';
 
-        LIBCLANG_PATH = "${pkgs.libclang}/lib";
+          OPENSSL_DIR = pkgs.openssl.dev;
+          OPENSSL_LIB_DIR = "${pkgs.openssl.dev}/lib";
+          OPENSSL_INCLUDE_DIR = "${pkgs.openssl.dev}/include";
+
+          LIBCLANG_PATH = "${pkgs.libclang}/lib";
+
         };
-      };
-    );
+      });
 }
