@@ -9,7 +9,7 @@
       sync = "bash /home/rotted/.dotfiles/sync";
       shutdown = "shutdown now";
       cd = "z";
-      ttyper = "ttyper -l rust --sudden-death -w 20";
+      ttyper = "ttyper -l rust -w 20";
       rustdev = "nix develop ~/.dotfiles/rust/";
     };
 
