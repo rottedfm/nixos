@@ -21,6 +21,7 @@
     pkgs.ttyper
     pkgs.bottom
     pkgs.neofetch
+    pkgs.htop
 
     # auth
     pkgs.pass
