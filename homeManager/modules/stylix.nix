@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
   stylix.enable = true;
@@ -35,7 +35,7 @@
     };
   };
 
-  stylix.cursor.name = "Bibata-Modern-Ice";
+  stylix.cursor.name = "Bibata-Modern-Classic";
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.size = 24;
 
