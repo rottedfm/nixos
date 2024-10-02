@@ -5,7 +5,7 @@
 
   outputs = { self, nixpkgs }: {
     packages.x86_64-linux.default = nixpkgs.lib.mkShell {
-      buildInputs = [ nixpkgs.python3 nixpkgs.python3Packages.virtualenv ];
+      buildInputs = [ nixpkgs.python3 nixpkgs.python3Packages.virtualenv, nixpkgs.git ];
 
       shellHook = ''
         export SHELL=$(which zsh)

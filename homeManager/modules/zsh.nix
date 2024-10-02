@@ -10,8 +10,8 @@
       shutdown = "shutdown now";
       cd = "z";
       ttyper = "ttyper -l rust -w 20";
-      rust = "nix develop ~/.dotfiles/rust/";
-      python = "nix develop ~/.dotfiles/python";
+      rust = "sudo nix develop ~/.dotfiles/rust/";
+      python = "sudo nix develop ~/.dotfiles/python";
     };
 
     initExtra = ''
