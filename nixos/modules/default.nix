@@ -3,7 +3,7 @@
 
     # system
     ./locals.nix
-    ./network.nix    
+    ./network.nix
     ./boot.nix
     ./pipewire.nix
 
@@ -16,5 +16,7 @@
     # zsh
     ./zsh.nix
 
+    # ollama
+    ./ollama.nix
   ];
 }

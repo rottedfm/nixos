@@ -1,11 +1,4 @@
-{
-  inputs,
-  outputs,
-  lib, 
-  config,
-  pkgs,
-  ...
-}: {
+{ inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     # load modules
     ./modules/default.nix
@@ -15,17 +8,12 @@
 
   nixpkgs = {
     # load overlays
-    overlays = [
-      outputs.overlays.unstable-packages
-    ];
+    overlays = [ outputs.overlays.unstable-packages ];
 
-    config = {
-      allowUnfree = true;
-    };
+    config = { allowUnfree = true; };
   };
 
-  nix = let
-    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+  nix = let flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
   in {
     settings = {
       # enable Flakes
@@ -40,7 +28,7 @@
     channel.enable = false;
 
     # make flake registry and nix path match flake inputs
-    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
+    registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
@@ -52,10 +40,9 @@
     isNormalUser = true;
     description = "rotted";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
-  
   # look up
   system.stateVersion = "24.05";
 }
