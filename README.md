@@ -1,7 +1,6 @@
 # nixconf
 
 ## TODO: 
-- [ ] kitty
-- [ ] qutebrowser
-- [ ] rust
-- [ ] helix settings
+- [ ] tmenu
+- [ ] pyprland
+- [ ] wallpaper change script
