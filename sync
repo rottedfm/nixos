@@ -52,9 +52,11 @@ handle_wallpaper_flag() {
   pkill Hyprland
 
   # Perform the rebuild (if necessary)
-  rebuild_home_manager
-  rebuild_nixos
 
+  if ! rebuild_home_manager; then 
+    rebuild_home_manager
+  fi
+  
   # Reopen Hyprland after rebuild
   echo "Reopening Hyprland..."
   Hyprland &
@@ -88,10 +90,36 @@ handle_failure() {
   exit 1
 }
 
+# function to update stylix.nix with the new polarity
+update_polarity() {
+  local polarity_choice=$1
+
+  if [[ "$polarity_choice" != "dark" && "$polarity_choice" != "light" ]]; then
+    echo "Error: Invalid polarity option. Please use 'dark' or 'light'."
+    exit 1
+  fi
+
+  echo "Updating polarity to $polarity_choice..."
+   
+  sed -i "s|stylix.polarity = \".*\";|stylix.polarity = \"$polarity_choice\";|" "$STYLIX_NIX"
+  
+  echo "Polarity updated successfully in $STYLIX_NIX."
+}
+# Add your flag options here
 while [[ "$#" -gt 0 ]]; do
   case $1 in
-    --wallpaper|-w) handle_wallpaper_flag "$2"; shift ;;
-    *) echo "Unknown parameter passed: $1"; exit 1 ;;
+    --wallpaper|-w)
+      handle_wallpaper_flag "$2"
+      shift  # Move past the wallpaper argument
+      ;;
+    --polarity|-p)
+      update_polarity "$2"
+      shift  # Move past the polarity argument
+      ;;
+    *) 
+      echo "Unknown parameter passed: $1"
+      exit 1
+      ;;
   esac
   shift
 done

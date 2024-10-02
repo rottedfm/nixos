@@ -3,7 +3,7 @@
 {
   stylix.enable = true;
 
-  stylix.image = ../../wallpapers/sunset.jpg;
+  stylix.image = ../../wallpapers/sakura.png;
   stylix.polarity = "dark";
 
   stylix.fonts = {
