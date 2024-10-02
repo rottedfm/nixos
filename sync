@@ -3,8 +3,62 @@
 # exit if any command exits with a non-zero status
 set -e
 
+WALLPAPER_PATH="$HOME/.dotfiles/wallpapers"
+STYLIX_NIX="$HOME/.dotfiles/homeManager/modules/stylix.nix"
+
 echo "Adding chanages to Git..."
 git add ~/.dotfiles
+
+# function to update stylix.nix with new wallpaper
+update_wallpaper() {
+  local wallpaper_file=$1
+  echo "Updating wallpaper to $wallpaper_file..."
+
+  # use sed to replace the line containing stylix.image
+  sed -i "s|stylix.image = .*;|stylix.image = ../../wallpapers/$wallpaper_file;|" "$STYLIX_NIX"
+
+  echo "Wallpaper updated successfully in $STYLIX_NIX."
+}
+
+# function to handle the wallpaper flag
+handle_wallpaper_flag() {
+  local wallpaper_choice=$1
+
+  if [[ "$wallpaper_choice" == "random" ]]; then
+    # Select a random .jpg or .png file from the wallpapers folder
+    wallpaper_file=$(ls "$WALLPAPER_PATH"/*.{jpg,png} 2> /dev/null | shuf -n 1)
+    wallpaper_file=$(basename "$wallpaper_file")  # Get only the file name
+  else
+    # Use the specified file, ensuring it's a .jpg or .png
+    if [[ "$wallpaper_choice" =~ \.(jpg|png)$ ]]; then
+      wallpaper_file="$wallpaper_choice"
+    else
+      echo "Error: Invalid wallpaper file. Only .jpg or .png files are supported."
+      exit 1
+    fi
+  fi
+
+  # Check if the file exists in the wallpapers folder
+  if [[ ! -f "$WALLPAPER_PATH/$wallpaper_file" ]]; then
+    echo "Error: Wallpaper file '$wallpaper_file' not found in $WALLPAPER_PATH."
+    exit 1
+  fi
+
+  # Update stylix.nix with the new wallpaper
+  update_wallpaper "$wallpaper_file"
+
+  # Close Hyprland before rebuild
+  echo "Closing Hyprland before rebuild..."
+  pkill Hyprland
+
+  # Perform the rebuild (if necessary)
+  rebuild_home_manager
+  rebuild_nixos
+
+  # Reopen Hyprland after rebuild
+  echo "Reopening Hyprland..."
+  Hyprland &
+}
 
 # function to rebuild NixOS
 rebuild_nixos() {
@@ -33,6 +87,14 @@ handle_failure() {
   fi
   exit 1
 }
+
+while [[ "$#" -gt 0 ]]; do
+  case $1 in
+    --wallpaper|-w) handle_wallpaper_flag "$2"; shift ;;
+    *) echo "Unknown parameter passed: $1"; exit 1 ;;
+  esac
+  shift
+done
 
 # attempt to rebuild nixos
 if ! rebuild_nixos; then
