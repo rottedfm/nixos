@@ -19,7 +19,7 @@
 
           shellHook = ''
             export SHELL=$(which zsh)
-            exec zsh
+            zsh
           '';
         };
       });

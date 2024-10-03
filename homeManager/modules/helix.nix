@@ -7,17 +7,10 @@
     defaultEditor = true;
     extraPackages = [ pkgs.unstable.ltex-ls pkgs.unstable.marksman ];
     languages = {
-      language = [
-        {
-          name = "markdown";
-          language-servers = [ "marksman" "ltex-ls" ];
-        }
-        {
-          name = "nix";
-          auto-format = true;
-          formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
-        }
-      ];
+      language = [{
+        name = "markdown";
+        language-servers = [ "marksman" "ltex-ls" ];
+      }];
     };
 
     settings = {
