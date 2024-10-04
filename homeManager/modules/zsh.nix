@@ -16,6 +16,9 @@
 
     initExtra = ''
       source /home/rotted/.dotfiles/p10k.zsh
+
+      bindkey '^[[A' history-substring-search-up # or '\eOA'
+      bindkey '^[[B' history-substring-search-down # or '\eOB'
     '';
 
     # plugins
@@ -24,6 +27,7 @@
       plugins = [''
         zsh-users/zsh-autosuggestions
         zsh-users/zsh-syntax-highlighting
+        zsh-users/zsh-history-substring-search
         jeffreytse/zsh-vi-mode
         romkatv/powerlevel10k
       ''];
