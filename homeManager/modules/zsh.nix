@@ -16,8 +16,6 @@
 
     initExtra = ''
       source /home/rotted/.dotfiles/p10k.zsh
-      bindkey '^[[B' history-substring-search-up
-      bindkey '^[[D' history-substring-search-down
     '';
 
     # plugins
@@ -25,8 +23,8 @@
       enable = true;
       plugins = [''
         zsh-users/zsh-autosuggestions
-        zsh-users/zsh-history-substring-search
         zsh-users/zsh-syntax-highlighting
+        jeffreytse/zsh-vi-mode
         romkatv/powerlevel10k
       ''];
     };
