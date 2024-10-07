@@ -22,11 +22,13 @@
       in {
         devShell = pkgs.mkShell {
           nativeBuildInputs = [
-            pkgs.rust-bin.stable.latest.default
+            pkgs.rust-bin.nightly.latest.default
             pkgs.cargo
             pkgs.rustfmt
             pkgs.clippy
             pkgs.cargo-watch
+            pkgs.cargo-expand
+            pkgs.cargo-audit
 
             # C libs commonly required by Rust crates
             pkgs.openssl
