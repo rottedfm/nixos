@@ -1,6 +1,6 @@
 # nixconf
 
 ## TODO: 
-- [ ] tmenu
-- [ ] pyprland
-- [ ] wallpaper change script
+- [ ] sync -w/-p fixes
+- [ ] ags bar
+- [ ] rust fix
