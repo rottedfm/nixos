@@ -7,10 +7,16 @@
     defaultEditor = true;
     extraPackages = [ pkgs.unstable.ltex-ls pkgs.unstable.marksman ];
     languages = {
-      language = [{
-        name = "markdown";
-        language-servers = [ "marksman" "ltex-ls" ];
-      }];
+      language = [
+        {
+          name = "markdown";
+          language-servers = [ "marksman" "ltex-ls" ];
+        }
+        {
+          name = "rust";
+          language-servers = [ "rust-analyzer" ];
+        }
+      ];
     };
 
     settings = {
@@ -37,7 +43,15 @@
         mode.normal = "ʕ •ᴥ•ʔ";
         mode.insert = "“φʕ•ᴥ•oʔ";
         mode.select = "ʕ￫ᴥ￩ʔ";
-
+      };
+      
+      # Add rust-analyzer specific configuration
+      "language-server.rust-analyzer" = {
+        config = {
+          check = {
+            command = "clippy";
+          };
+        };
       };
     };
   };

@@ -19,8 +19,15 @@
         devShells.default = with pkgs; mkShell {
           buildInputs = [
             openssl
-            pkgs-config
+            rustfmt
+            bacon
+            clippy
+            rust-analyzer
             rust-bin.beta.latest.default
+          ];
+          nativeBuildInputs = [
+            autoreconfHook
+            pkg-config
           ];
         };      
       }
