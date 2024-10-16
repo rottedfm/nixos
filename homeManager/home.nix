@@ -20,8 +20,10 @@
     pkgs.cmatrix
     pkgs.ttyper
     pkgs.bottom
+    pkgs.btop
     pkgs.neofetch
     pkgs.htop
+    pkgs.termdown
 
     # auth
     pkgs.pass

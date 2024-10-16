@@ -22,7 +22,6 @@
             rustfmt
             bacon
             clippy
-            rust-analyzer
             rust-bin.beta.latest.default
           ];
           nativeBuildInputs = [
