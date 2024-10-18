@@ -48,18 +48,9 @@ handle_wallpaper_flag() {
   update_wallpaper "$wallpaper_file"
 
   # Close Hyprland before rebuild
-  echo "Closing Hyprland before rebuild..."
+  echo "Closing Hyprland..."
   pkill Hyprland
-
-  # Perform the rebuild (if necessary)
-
-  if ! rebuild_home_manager; then 
-    rebuild_home_manager
-  fi
-  
-  # Reopen Hyprland after rebuild
-  echo "Reopening Hyprland..."
-  Hyprland &
+  echo "Please sync to apply changes!"
 }
 
 # function to rebuild NixOS
