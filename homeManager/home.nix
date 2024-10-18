@@ -21,8 +21,9 @@
     pkgs.ttyper
     pkgs.bottom
     pkgs.neofetch
-    pkgs.termdown
     pkgs.alsa-utils
+    pkgs.pom
+    pkgs.todo
 
     # auth
     pkgs.pass
