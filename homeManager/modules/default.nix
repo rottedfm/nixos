@@ -10,5 +10,6 @@
     ./gpg.nix
     ./stylix.nix
     ./wofi.nix
+    ./zellij.nix
   ];
 }
