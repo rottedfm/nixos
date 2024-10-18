@@ -47,10 +47,9 @@ handle_wallpaper_flag() {
   # Update stylix.nix with the new wallpaper
   update_wallpaper "$wallpaper_file"
 
-  # Close Hyprland before rebuild
   echo "Closing Hyprland..."
-  pkill Hyprland
-  echo "Please sync to apply changes!"
+  echo "Starting sync..."
+  pkill Hyprland | sync
 }
 
 # function to rebuild NixOS
