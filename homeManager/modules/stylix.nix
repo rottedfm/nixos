@@ -4,7 +4,7 @@
   stylix.enable = true;
 
   stylix.image = ../../wallpapers/sunset.jpg;
-  stylix.polarity = "light";
+  stylix.polarity = "dark";
 
   stylix.fonts = {
     serif = {
