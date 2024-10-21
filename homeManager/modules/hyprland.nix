@@ -98,6 +98,11 @@
         "$mod CRTL, k, moveactive, 0 -50"
         "$mod CTRL, l, moveactive, 50 0"
       ];
+
+      windowrulev2 = [
+      "suppressevent maximize, class:.*"
+      "ev2 = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+      ];
     };
   };
 }

@@ -3,8 +3,8 @@
 {
   stylix.enable = true;
 
-  stylix.image = ../../wallpapers/monochrome-anime.jpg;
-  stylix.polarity = "light";
+  stylix.image = ../../wallpapers/sakura.png;
+  stylix.polarity = "dark";
 
   stylix.fonts = {
     serif = {
