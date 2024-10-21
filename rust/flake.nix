@@ -20,6 +20,8 @@
           buildInputs = [
             openssl
             rustfmt
+            rust-analyzer
+            lldb_19
             bacon
             clippy
             rust-bin.beta.latest.default

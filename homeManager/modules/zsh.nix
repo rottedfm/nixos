@@ -16,6 +16,7 @@
 
     initExtra = ''
       source /home/rotted/.dotfiles/p10k.zsh
+      zellij
     '';
 
     # plugins
