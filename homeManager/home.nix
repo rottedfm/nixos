@@ -24,6 +24,7 @@
     pkgs.alsa-utils
     pkgs.tenki
     pkgs.todo
+    pkgs.pom
 
     # auth
     pkgs.pass
