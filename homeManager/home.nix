@@ -22,7 +22,7 @@
     pkgs.bottom
     pkgs.neofetch
     pkgs.alsa-utils
-    pkgs.pom
+    pkgs.tenki
     pkgs.todo
 
     # auth
