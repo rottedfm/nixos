@@ -33,7 +33,8 @@
 
     # msc
     pkgs.unstable.firefox
-
+    pkgs.audacity
+    
     # libreoffice
     pkgs.libreoffice-qt
     pkgs.hunspell
