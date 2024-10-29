@@ -12,7 +12,7 @@
       ttyper = "ttyper -l rust -w 20";
       rust = "nix develop ~/.dotfiles/rust/";
       python = "nix develop ~/.dotfiles/python";
-      hyprland = "hyprland | clear";
+      hyprland = "hyprland & clear";
     };
 
     initExtra = ''
