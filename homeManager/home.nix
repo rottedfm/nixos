@@ -16,12 +16,12 @@
 
   home.packages = [
     # shell
-    pkgs.unstable.glow
+    pkgs.glow
     pkgs.cmatrix
     pkgs.ttyper
     pkgs.bottom
     pkgs.neofetch
-    pkgs.alsa-utils
+    pkgs.unstable.alsa-utils
     pkgs.tenki
     pkgs.todo
     pkgs.pom
