@@ -22,6 +22,7 @@
     pkgs.bottom
     pkgs.neofetch
     pkgs.unstable.alsa-utils
+    pkgs.mdr
     pkgs.tenki
     pkgs.todo
     pkgs.pom
