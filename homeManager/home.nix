@@ -25,6 +25,7 @@
     pkgs.tenki
     pkgs.todo
     pkgs.pom
+    pkgs.termdown
 
     # auth
     pkgs.pass
