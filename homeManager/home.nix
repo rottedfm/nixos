@@ -26,8 +26,8 @@
     pkgs.todo
     pkgs.pom
     pkgs.termdown
-    pkgs.ytermusic
-
+    pkgs.cava
+    
     # auth
     pkgs.pass
     pkgs.unstable.wofi-pass
