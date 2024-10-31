@@ -27,7 +27,6 @@
     pkgs.pom
     pkgs.termdown
     pkgs.cava
-    pkgs.unstable.ncspot
     
     # auth
     pkgs.pass
@@ -36,7 +35,8 @@
 
     # msc
     pkgs.unstable.firefox
-    pkgs.audacity
+    pkgs.spotify
+
     
     # libreoffice
     pkgs.libreoffice-qt
