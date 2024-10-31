@@ -31,6 +31,10 @@
             pkg-config
           ];
         };      
+
+        shellHook = ''
+          zsh
+        '';
       }
     );
 }
