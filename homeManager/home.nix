@@ -35,7 +35,6 @@
 
     # msc
     pkgs.unstable.firefox
-    pkgs.spotify
 
     
     # libreoffice
