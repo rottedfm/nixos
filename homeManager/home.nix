@@ -16,7 +16,6 @@
 
   home.packages = [
     # shell
-    pkgs.glow
     pkgs.cmatrix
     pkgs.ttyper
     pkgs.bottom
@@ -27,6 +26,7 @@
     pkgs.todo
     pkgs.pom
     pkgs.termdown
+    pkgs.ytermusic
 
     # auth
     pkgs.pass
