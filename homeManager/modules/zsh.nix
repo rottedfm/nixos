@@ -16,6 +16,11 @@
 
     initExtra = ''
       source /home/rotted/.dotfiles/p10k.zsh
+
+      # check for hyprland
+      if ! pgrep -x "Hyprland" > /dev/null; then
+        /home/rotted/Scripts/login/target/release/login
+      fi
     '';
 
     # plugins
