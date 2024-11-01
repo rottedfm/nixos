@@ -10,12 +10,13 @@
     # ssh
     ./ssh.nix
 
-    # xwayland
-    ./x11.nix
 
     # zsh
     ./zsh.nix
 
+
+    ./xserver.nix
+    
     # ollama
     ./ollama.nix
   ];
