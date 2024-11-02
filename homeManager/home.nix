@@ -35,6 +35,7 @@
 
     # msc
     pkgs.unstable.firefox
+    pkgs.unstable.tor
 
     
     # libreoffice
