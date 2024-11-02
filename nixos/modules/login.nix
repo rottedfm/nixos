@@ -13,6 +13,12 @@
       Group = "rotted";
       StandardOutput = "journal";
       StandardError = "journal";
+      Environment = [
+      "RUST_BACKTRACE=1"
+      "HOME=/home/rotted"
+      "PATH=/usr/local/bin:/usr/bin:/bin"
+      ];
+      
     };
 
     environment = {
