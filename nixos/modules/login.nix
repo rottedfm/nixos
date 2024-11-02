@@ -9,6 +9,10 @@
     serviceConfig = {
       ExecStart = "${pkgs.coreutils}/bin/env /home/rotted/Scripts/login/target/release/login";
       Restart = "on-failure";
+      User = "rotted";
+      Group = "rotted";
+      StandardOutput = "journal";
+      StandardError = "journal";
     };
 
   };
