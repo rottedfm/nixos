@@ -10,9 +10,6 @@
     # ssh
     ./ssh.nix
 
-    # login service
-    ./login.nix
-
     # zsh
     ./zsh.nix
 

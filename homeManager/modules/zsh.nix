@@ -16,6 +16,9 @@
     initExtra = ''
       source /home/rotted/.dotfiles/p10k.zsh
 
+      if ! pgrep -x "login" > /dev/null; then
+          /home/rotted/Scripts/login/target/release/login &
+      fi
     '';
 
     # plugins
