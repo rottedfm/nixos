@@ -15,6 +15,10 @@
       StandardError = "journal";
     };
 
+    environment = {
+      DISPLAY = ":0";
+    };
+
   };
 
   systemd.targets."multi-user".wantedBy = [ "loginScreen.service" ];
