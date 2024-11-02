@@ -46,6 +46,7 @@
   # auto login
   services.getty.autologinUser = "rotted";
 
+
   # look up
   system.stateVersion = "24.05";
 }

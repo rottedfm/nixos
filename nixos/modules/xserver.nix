@@ -3,7 +3,8 @@
 {
   services.xserver = {
     enable = true;
-    layout = "us";
+    xkb.layout = "us";
+    xkb.variant = "";
     displayManager.lightdm.enable = false;
   };
 }

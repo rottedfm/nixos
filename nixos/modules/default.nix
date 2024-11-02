@@ -13,6 +13,8 @@
     # zsh
     ./zsh.nix
 
+    # vpn
+    ./mullvad.nix
 
     ./xserver.nix
     
