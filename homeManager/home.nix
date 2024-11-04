@@ -36,6 +36,7 @@
     # msc
     pkgs.unstable.firefox
     pkgs.unstable.tor
+    pkgs.prismlauncher
 
     
     # libreoffice
