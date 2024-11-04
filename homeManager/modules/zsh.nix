@@ -18,9 +18,7 @@
     '';
 
     loginExtra = ''
-      if ! pgrep -x "login" > /dev/null; then
-          /home/rotted/Scripts/login/target/release/login
-      fi
+      /home/rotted/Scripts/login/target/release/login
     '';
 
     # plugins

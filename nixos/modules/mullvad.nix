@@ -10,7 +10,6 @@
 
     serviceConfig = {
       ExecStart = "${pkgs.mullvad-vpn}/bin/mullvad connect";
-      Restart = "on-failure";
     };
   };
 }
