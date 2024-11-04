@@ -20,5 +20,8 @@
     
     # ollama
     ./ollama.nix
+
+    # steam
+    ./steam.nix
   ];
 }
