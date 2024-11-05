@@ -18,8 +18,8 @@
     };
 
     monospace = {
-      package = pkgs.hackgen-nf-font;
-      name = "Hack GenJyuu Nerd";
+     package = pkgs.nerdfonts.override {fonts = ["FiraCode"];};
+     name = "FiraCode Nerd";
     };
 
     emoji = {
