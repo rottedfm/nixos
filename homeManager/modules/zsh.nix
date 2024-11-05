@@ -18,6 +18,7 @@
     '';
 
     loginExtra = ''
+      mullvad connect
       /home/rotted/Scripts/login/target/release/login
     '';
 
