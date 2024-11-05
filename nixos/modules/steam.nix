@@ -11,6 +11,7 @@
     steam
     gamescope
     mangohud
+    lutris
   ];
 
     # Environment variables to improve Wayland support in Steam
