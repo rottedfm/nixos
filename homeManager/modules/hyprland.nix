@@ -3,6 +3,7 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    xwayland.enable = true;
     settings = {
       # env
       env = [ "HYPRCURSOR_SIZE,24" ];
