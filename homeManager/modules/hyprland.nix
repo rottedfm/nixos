@@ -7,6 +7,7 @@
     settings = {
       # env
       env = [ "HYPRCURSOR_SIZE,24" ];
+      exec-once = "export DISPLAY=:0";
 
       # monitor settings
       monitor = ",highrr,auto,1";
