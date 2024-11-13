@@ -18,7 +18,7 @@
     };
 
     monospace = {
-     package = pkgs.nerdfonts.override {fonts = ["FiraCode"];};
+     package = pkgs.fira-code;
      name = "FiraCode Nerd";
     };
 
