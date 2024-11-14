@@ -3,11 +3,12 @@
 # exit if any command exits with a non-zero status
 set -e
 
-WALLPAPER_PATH="$HOME/.dotfiles/wallpapers"
-STYLIX_NIX="$HOME/.dotfiles/nixos/modules/stylix.nix"
-
 echo "Adding chanages to Git..."
 git add ~/.dotfiles
+
+WALLPAPER_PATH="$HOME/.dotfiles/wallpapers"
+STYLIX_NIX="$HOME/.dotfiles/nixos/modules/stylix.nix"
+STYLIX_HOME="$HOME/.dotfiles/homeManager/modules/stylix.nix"
 
 # function to update stylix.nix with new wallpaper
 update_wallpaper() {
@@ -18,6 +19,14 @@ update_wallpaper() {
   sed -i "s|stylix.image = .*;|stylix.image = ../../wallpapers/$wallpaper_file;|" "$STYLIX_NIX"
 
   echo "Wallpaper updated successfully in $STYLIX_NIX."
+
+  local wallpaper_file=$1
+  echo "Updating wallpaper to $wallpaper_file..."
+
+  # use sed to replace the line containing stylix.image
+  sed -i "s|stylix.image = .*;|stylix.image = ../../wallpapers/$wallpaper_file;|" "$STYLIX_HOME"
+
+  echo "Wallpaper updated successfully in $STYLIX_HOME."
 }
 
 # function to handle the wallpaper flag
@@ -126,6 +135,9 @@ fi
 
 cd /home/rotted/.dotfiles || exit 1
 
+
+echo "Adding chanages to Git..."
+git add ~/.dotfiles
 
 # show git diff
 echo "Showing git diff..."

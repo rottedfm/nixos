@@ -15,7 +15,7 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ags, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
     let
       inherit (self) outputs;
       # Supported systems
@@ -32,7 +32,7 @@
       nixosConfigurations = {
         fm = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./nixos/configuration.nix stylix.nixosModules.stylix];
+          modules = [ stylix.nixosModules.stylix ./nixos/configuration.nix ];
         };
       };
 
@@ -41,7 +41,7 @@
         "rotted@fm" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./homeManager/home.nix ];
+          modules = [ stylix.homeManagerModules.stylix ./homeManager/home.nix ];
         };
       };
     };

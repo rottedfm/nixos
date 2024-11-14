@@ -11,5 +11,6 @@
     ./wofi.nix
     ./zellij.nix
     ./mako.nix
+    ./stylix.nix
   ];
 }
