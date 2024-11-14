@@ -18,8 +18,8 @@
     };
 
     monospace = {
-     package = pkgs.hackgen-nf-font;
-     name = "Hack Gen";
+     package = pkgs.nerdfonts.override {fonts = ["FiraCode"];};
+     name = "Fira Code Nerd";
     };
 
     emoji = {
