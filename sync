@@ -103,6 +103,12 @@ update_polarity() {
   sed -i "s|stylix.polarity = \".*\";|stylix.polarity = \"$polarity_choice\";|" "$STYLIX_NIX"
   
   echo "Polarity updated successfully in $STYLIX_NIX."
+  
+  echo "Updating polarity to $polarity_choice..."
+   
+  sed -i "s|stylix.polarity = \".*\";|stylix.polarity = \"$polarity_choice\";|" "$STYLIX_HOME"
+  
+  echo "Polarity updated successfully in $STYLIX_HOME."
 }
 # Add your flag options here
 while [[ "$#" -gt 0 ]]; do

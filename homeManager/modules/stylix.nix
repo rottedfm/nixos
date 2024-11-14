@@ -2,6 +2,7 @@
 
 {
   stylix.enable = true;
+  stylix.autoEnable = true;
 
   stylix.image = ../../wallpapers/sakura.png;
   stylix.polarity = "dark";
@@ -37,7 +38,7 @@
   };
 
  
-  stylix.opacity.terminal = 0.35;
+  stylix.opacity.terminal = 0.55;
 
   stylix.cursor.name = "Bibata-Modern-Classic";
   stylix.cursor.package = pkgs.bibata-cursors;
