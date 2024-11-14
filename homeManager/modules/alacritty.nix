@@ -6,9 +6,11 @@
     package = pkgs.unstable.alacritty;
     settings = {
       font = {
-        family = "Fira Code";
-        features = {
-          liga = true;
+        normal = {
+          family = "Fira Code Nerd";
+          features = {
+            liga = true;
+          };
         };
       };
     };
