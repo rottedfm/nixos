@@ -1,6 +1,6 @@
 {
   imports = [
-    ./kitty.nix
+    ./alacritty.nix
     ./zsh.nix
     ./hyprland.nix
     ./helix.nix
@@ -8,7 +8,6 @@
     ./qutebrowser.nix
     ./zoxide.nix
     ./gpg.nix
-    ./stylix.nix
     ./wofi.nix
     ./zellij.nix
     ./mako.nix

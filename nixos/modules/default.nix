@@ -21,6 +21,9 @@
     # ollama
     ./ollama.nix
 
+    # stylix
+    ./stylix.nix
+
     # steam
     ./steam.nix
   ];

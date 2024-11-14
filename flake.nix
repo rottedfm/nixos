@@ -32,7 +32,7 @@
       nixosConfigurations = {
         fm = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./nixos/configuration.nix ];
+          modules = [ ./nixos/configuration.nix stylix.nixosModules.stylix];
         };
       };
 
@@ -41,7 +41,7 @@
         "rotted@fm" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./homeManager/home.nix stylix.homeManagerModules.stylix ];
+          modules = [ ./homeManager/home.nix ];
         };
       };
     };

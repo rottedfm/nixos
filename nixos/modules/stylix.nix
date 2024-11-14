@@ -28,14 +28,14 @@
     };
 
     sizes = {
-      applications = 14;
-      terminal = 14;
-      desktop = 14;
-      popups = 14;
+      applications = 16;
+      terminal = 16;
+      desktop = 16;
+      popups = 16;
     };
   };
 
-  stylix.opacity.terminal = 0.55;
+  stylix.opacity.terminal = 0.35;
 
   stylix.cursor.name = "Bibata-Modern-Classic";
   stylix.cursor.package = pkgs.bibata-cursors;

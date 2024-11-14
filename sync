@@ -4,7 +4,7 @@
 set -e
 
 WALLPAPER_PATH="$HOME/.dotfiles/wallpapers"
-STYLIX_NIX="$HOME/.dotfiles/homeManager/modules/stylix.nix"
+STYLIX_NIX="$HOME/.dotfiles/nixos/modules/stylix.nix"
 
 echo "Adding chanages to Git..."
 git add ~/.dotfiles
