@@ -19,7 +19,7 @@
 
     monospace = {
      package = pkgs.hackgen-nf-font;
-     name = "Hack Gen Nerd";
+     name = "Hack Gen";
     };
 
     emoji = {
