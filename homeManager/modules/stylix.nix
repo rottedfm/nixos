@@ -27,6 +27,7 @@
       name = "Noto Color Emoji";
     };
 
+
     sizes = {
       applications = 16;
       terminal = 16;
@@ -35,6 +36,7 @@
     };
   };
 
+ 
   stylix.opacity.terminal = 0.35;
 
   stylix.cursor.name = "Bibata-Modern-Classic";
