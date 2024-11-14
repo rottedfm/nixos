@@ -8,9 +8,6 @@
       font = {
         normal = {
           family = "Fira Code Nerd";
-          features = {
-            liga = true;
-          };
         };
       };
     };
