@@ -27,8 +27,7 @@
     pkgs.pom
     pkgs.termdown
     pkgs.cava
-    pkgs.nerdfonts
-    
+
     # auth
     pkgs.pass
     pkgs.unstable.wofi-pass
