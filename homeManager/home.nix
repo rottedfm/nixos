@@ -27,6 +27,7 @@
     pkgs.pom
     pkgs.termdown
     pkgs.cava
+    pkgs.kitty
     
     # auth
     pkgs.pass
