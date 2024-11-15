@@ -4,8 +4,8 @@
   stylix.enable = true;
   stylix.autoEnable = true;
 
-  stylix.image = ../../wallpapers/monochrome-anime.jpg;
-  stylix.polarity = "dark";
+  stylix.image = ../../wallpapers/sunset.jpg;
+  stylix.polarity = "light";
 
   stylix.fonts = {
     serif = {
