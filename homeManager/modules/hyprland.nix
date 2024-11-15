@@ -62,7 +62,7 @@
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, Q, exec, wezterm start"
+        "$mod, Q, exec, wezterm start --always-new-process"
         "$mod, C, killactive,"
         "$mod, M, exit,"
         "$mod, E, exec, qutebrowser"
