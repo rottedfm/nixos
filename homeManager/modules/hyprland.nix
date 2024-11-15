@@ -62,7 +62,7 @@
       "$mod" = "SUPER";
 
       bind = [
-        "$mod, Q, exec, alacritty"
+        "$mod, Q, exec, wezterm start"
         "$mod, C, killactive,"
         "$mod, M, exit,"
         "$mod, E, exec, qutebrowser"
