@@ -1,6 +1,6 @@
 {
   imports = [
-    ./wezterm.nix
+    ./kitty.nix
     ./zsh.nix
     ./hyprland.nix
     ./helix.nix

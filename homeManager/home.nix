@@ -27,7 +27,7 @@
     pkgs.pom
     pkgs.termdown
     pkgs.cava
-    pkgs.kitty
+    pkgs.nerdfonts
     
     # auth
     pkgs.pass
