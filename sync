@@ -6,6 +6,13 @@ set -e
 echo "Adding chanages to Git..."
 git add ~/.dotfiles
 
+# commit chanages 
+COMMIT_MSG="$(date)"
+git commit -m "$COMMIT_MSG"
+
+# push changes to git
+git push -u origin main
+
 WALLPAPER_PATH="$HOME/.dotfiles/wallpapers"
 STYLIX_NIX="$HOME/.dotfiles/nixos/modules/stylix.nix"
 STYLIX_HOME="$HOME/.dotfiles/homeManager/modules/stylix.nix"
@@ -140,10 +147,6 @@ if ! rebuild_home_manager; then
 fi
 
 cd /home/rotted/.dotfiles || exit 1
-
-
-echo "Adding chanages to Git..."
-git add ~/.dotfiles
 
 # show git diff
 echo "Showing git diff..."
