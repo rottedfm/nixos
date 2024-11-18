@@ -17,6 +17,7 @@
     };
 
     initExtra = ''
+      source ~/.dotfiles/.p10k.zsh
     '';
     
     loginExtra = ''
