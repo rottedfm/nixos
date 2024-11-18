@@ -3,15 +3,7 @@
 # exit if any command exits with a non-zero status
 set -e
 
-echo "Adding chanages to Git..."
-git add ~/.dotfiles
-
-# commit chanages 
-COMMIT_MSG="$(date)"
-git commit -m "$COMMIT_MSG"
-
-# push changes to git
-git push -u origin main
+git add .
 
 WALLPAPER_PATH="$HOME/.dotfiles/wallpapers"
 STYLIX_NIX="$HOME/.dotfiles/nixos/modules/stylix.nix"
