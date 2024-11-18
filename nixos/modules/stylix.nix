@@ -34,11 +34,4 @@
       popups = 16;
     };
   };
-
-  stylix.opacity.terminal = 0.35;
-
-  stylix.cursor.name = "Bibata-Modern-Classic";
-  stylix.cursor.package = pkgs.bibata-cursors;
-  stylix.cursor.size = 24;
-
 }

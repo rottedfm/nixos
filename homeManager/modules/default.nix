@@ -12,5 +12,6 @@
     ./zellij.nix
     ./mako.nix
     ./stylix.nix
+    ./starship.nix
   ];
 }

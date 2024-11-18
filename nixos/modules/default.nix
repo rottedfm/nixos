@@ -23,8 +23,5 @@
 
     # stylix
     ./stylix.nix
-
-    # steam
-    ./steam.nix
   ];
 }
