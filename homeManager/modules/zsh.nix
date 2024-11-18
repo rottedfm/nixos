@@ -28,6 +28,7 @@
         user          # Show the username
         host          # Show the hostname
         dir           # Current directory
+        line_sep
         git           # Git status
         jobs          # Background jobs indicator
         exit_code     # Exit code of the last command
