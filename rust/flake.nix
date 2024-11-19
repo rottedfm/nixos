@@ -30,11 +30,11 @@
             autoreconfHook
             pkg-config
           ];
-        };      
 
-        shellHook = ''
-          zsh
-        '';
+          shellHook = ''
+            exec zsh
+          '';
+        };      
       }
     );
 }
